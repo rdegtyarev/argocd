@@ -9,7 +9,7 @@ spec:
     namespace: ''
     server: 'https://kubernetes.default.svc'
   source:
-    path: packages/app/prod
+    path: packages/app/stage
     repoURL: 'https://gitlab.com/devops-diploma-public/netology-app/cluster-repo.git'
     targetRevision: main
   project: default
