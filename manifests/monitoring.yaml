@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: netology-prod
+  name: monitoring
   namespace: argocd
 spec:
   destination:
@@ -9,9 +9,9 @@ spec:
     namespace: ''
     server: 'https://kubernetes.default.svc'
   source:
-    path: packages/app/prod
-    repoURL: 'https://gitlab.com/devops-diploma-public/netology-app/cluster-repo.git'
-    targetRevision: main
+    path: .
+    repoURL: 'https://github.com/prometheus-operator/kube-prometheus.git'
+    targetRevision: release-0.11
   project: default
   syncPolicy:
     automated:
